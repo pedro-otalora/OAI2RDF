@@ -1,0 +1,65 @@
+/* estilos_areas.css */
+/* Areas */
+/* Título del área */
+.titulo-area {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.titulo-area h1 {
+    font-size: 2.5em;
+    color: #AF1A2E;
+    font-weight: bold;
+}
+
+.titulo-area p {
+    font-size: 1.2em;
+}
+
+/* Listado de grupos temáticos */
+.grupos-tematicos-lista {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.grupos-tematicos-lista h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #AF1A2E;
+}
+
+
+/* Bloque superior de áreas temáticas */
+.bloque-areas {
+    margin-bottom: 20px;
+}
+
+.lista-areas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.area-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.area-item a:hover {
+    text-decoration: underline;
+}
+
+/* Subtítulo del área seleccionada */
+.titulo-area h2 {
+    margin-top: 20px;
+}
+
+
+.areas-tematicas h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #AF1A2E;
+}

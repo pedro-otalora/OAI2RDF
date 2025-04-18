@@ -1,0 +1,237 @@
+/* estilos_general.css */
+
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+/* Cabecera */
+header {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.header-container {
+
+
+    width: 80%;
+    /* Establece el ancho al 80% */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+
+
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+.header-logo-left img,
+.header-logo-right img {
+    max-height: 50px;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.header-title h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #AF1A2E;
+    font-weight: bold;
+}
+
+
+
+/* Barra de navegación */
+.navbar {
+    background-color: #AF1A2E;
+    color: white;
+    padding: 10px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav li {
+    margin: 0 15px;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Contenido principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+/* Pie de página */
+.site-footer {
+    width: 78%;          /* Mismo ancho que el contenido principal */
+    margin: 0 auto;      /* Centrado horizontal */
+    text-align: center;
+    padding: 20px;
+    background-color: #AF1A2E;
+    color: white;
+}
+
+/* Estilos generales para todas las tablas */
+.tabla-grupos {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Estilos para los encabezados de la tabla */
+.tabla-grupos th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: normal;
+}
+
+.tabla-grupos a {
+    color: #AF1A2E;
+}
+
+.tabla-grupos th a {
+    color: white;
+    text-decoration: none;
+}
+
+.tabla-grupos th a:hover {
+    /* text-decoration: underline;  Subrayado al pasar el ratón */
+}
+
+.tabla-grupos th a.active {
+    font-weight: bold;
+}
+
+.tabla-grupos th a span {
+    margin-left: 5px;
+}
+
+.tabla-grupos th a span {
+    font-size: 12px;
+    color: white;
+}
+
+/* Estilos para las celdas de la tabla */
+.tabla-grupos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para filas pares */
+.tabla-grupos tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para el hover de las filas */
+.tabla-grupos tbody tr:hover {
+    background-color: #eee;
+}
+
+/* Estilos para la paginación */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    color: #333;
+    border-radius: 5px;
+}
+
+.pagination a.active {
+    background-color: #AF1A2E;
+    color: white;
+    border-color: #AF1A2E;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+
+
+.tabla-botones {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.tabla-botones button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #AF1A2E;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.tabla-botones button:hover {
+    background-color: #771020;
+}
+
+
+.tabla-autowidth th,
+.tabla-autowidth td {
+    width: auto !important;
+}
+
+
+/* Estilo general para la etiqueta de página */
+
+main {
+    position: relative;
+  }
+
+.page-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    background-color: #AF1A2E; /* Color por defecto (puedes personalizar según el tipo de página) */
+    border-radius: 3px;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}

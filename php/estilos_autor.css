@@ -1,0 +1,16 @@
+.autor-detalles {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.tabla-grupos th, .tabla-grupos td {
+    text-align: left;
+}
+
+.tabla-grupos a {
+    color: #AF1A2E;
+}
+
+.tabla-grupos a:hover {
+    text-decoration: underline;
+}

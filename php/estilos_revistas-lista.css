@@ -1,0 +1,66 @@
+/* estilos_revistas-lista.css */
+
+/* Revista */
+
+/* Bloque principal */
+.revistas-lista {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.revistas-lista h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #AF1A2E;
+    font-weight: bold;
+}
+
+.revistas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.revista-item {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.revista-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.revista-item img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.revista-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.revista-datos {
+    display: flex;
+    flex-direction: column;
+}
+
+.revista-datos span {
+    font-size: 0.9em;
+    margin: 2px 0;
+}
+
+.revista-datos strong {
+    font-weight: bold;
+}
+
+.revista-item p {
+    font-size: 1.2em;
+}

@@ -1,0 +1,32 @@
+/* General */
+.tablas-estadisticas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tabla-estadistica {
+    flex: 1;
+    min-width: 300px;
+}
+
+.tabla-grupos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-grupos th, .tabla-grupos td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tabla-grupos th {
+    background-color: #f4f4f4;
+}
+
+.areas-tematicas h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #AF1A2E;
+}

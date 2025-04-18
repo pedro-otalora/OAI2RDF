@@ -1,0 +1,1040 @@
+/* estilos.css */
+
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fondo gris claro para toda la página */
+    color: #333;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Cabecera */
+header {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.header-container {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+
+.header-logo-left img,
+.header-logo-right img {
+    max-height: 50px;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.header-title h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #AF1A2E;
+    font-weight: bold;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color: #AF1A2E;
+    color: white;
+    padding: 10px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav li {
+    margin: 0 15px;
+}
+
+.navbar-nav a {
+    color: white;
+}
+
+/* Contenido principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedores principales */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+.entity-container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.entity-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.entity-container img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.entity-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.entity-container p {
+    font-size: 3em;
+    font-weight: bold;
+    color: #AF1A2E;
+}
+
+/* Bloque de áreas temáticas */
+.areas-tematicas {
+    width: 80%;
+}
+
+.areas-tematicas h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #AF1A2E;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.areas-tematicas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.area-tematica-container {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.area-tematica-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.area-tematica-container h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.area-tematica-container p {
+    font-size: 1.2em;
+}
+
+/* Pie de página */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #AF1A2E;
+    color: white;
+}
+
+/* Revista */
+
+/* Bloque principal */
+.revistas-lista {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.revistas-lista h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #AF1A2E;
+    font-weight: bold;
+}
+
+.revistas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.revista-item {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.revista-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.revista-item img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.revista-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.revista-datos {
+    display: flex;
+    flex-direction: column;
+}
+
+.revista-datos span {
+    font-size: 0.9em;
+    margin: 2px 0;
+}
+
+.revista-datos strong {
+    font-weight: bold;
+}
+
+/* Areas */
+/* Título del área */
+.titulo-area {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.titulo-area h1 {
+    font-size: 2.5em;
+    color: #AF1A2E;
+    font-weight: bold;
+}
+
+.titulo-area p {
+    font-size: 1.2em;
+}
+
+/* Listado de grupos temáticos */
+.grupos-tematicos-lista {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.grupos-tematicos-lista h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #AF1A2E;
+}
+
+/* Estilos generales para todas las tablas */
+.tabla-grupos {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Estilos para los encabezados de la tabla */
+.tabla-grupos th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: normal;
+}
+
+.tabla-grupos th a {
+    color: white;
+}
+
+.tabla-grupos th a span {
+    font-size: 12px;
+    color: white;
+}
+
+/* Estilos para las celdas de la tabla */
+.tabla-grupos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para filas pares */
+.tabla-grupos tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para el hover de las filas */
+.tabla-grupos tbody tr:hover {
+    background-color: #eee;
+}
+
+/* Estilos para la página de detalles de la revista */
+.revista-detalles {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.revista-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Columna 1: Imagen e Información */
+
+/* Columna 2: Tablas Top */
+
+/* Columna 3: Imagen e Información */
+
+/* Columna 4: Tablas Top */
+
+/* Columna 5: Imagen e Información */
+
+/* Columna 6: Tablas Top */
+
+/* Columna 7: Imagen e Información */
+
+/* Columna 8: Tablas Top */
+
+.revista-info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.revista-imagen {
+    padding-right: 20px;
+}
+
+.revista-imagen img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-fija {
+    height: 300px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.revista-datos {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.revista-datos-bloque {
+    margin-bottom: 10px;
+}
+
+.revista-datos-bloque p {
+    margin: 5px 0;
+}
+
+.revista-tabla {
+    margin-top: 30px;
+}
+
+.tabla-botones {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tabla-botones button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #AF1A2E;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tabla-botones button:hover {
+    background-color: #771020;
+}
+
+/* Estilos para la paginación */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    color: #333;
+    border-radius: 5px;
+}
+
+.pagination a.active {
+    background-color: #AF1A2E;
+    color: white;
+    border-color: #AF1A2E;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos para numero */
+.numero-detalles {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.numero-imagen img {
+    max-width: 100%;
+    height: 300px;
+}
+
+.tabla-botones button {
+    padding: 10px 15px;
+}
+
+/* Estilos para el área de información en revista.php */
+.revista-info-grid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.revista-col-1,
+.revista-col-2 {
+    flex: 1;
+}
+
+.revista-col-1 .revista-imagen img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.revista-col-1 .revista-datos p {
+    margin-bottom: 10px;
+}
+
+.revista-col-2 .stats-table {
+    margin-bottom: 20px;
+}
+
+.revista-col-2 .stats-table h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #AF1A2E;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.revista-col-2 .stats-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.revista-col-2 .stats-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para la tabla de revista detalles */
+.tabla-grupos,
+.revista-detalles .stats-table table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Estilos para los encabezados de la tabla */
+.tabla-grupos th,
+.revista-detalles .stats-table th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: normal;
+}
+
+/* Estilos para las celdas de la tabla */
+.tabla-grupos td,
+.revista-detalles .stats-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para filas pares */
+.tabla-grupos tbody tr:nth-child(even),
+.revista-detalles .stats-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para el hover de las filas */
+.tabla-grupos tbody tr:hover,
+.revista-detalles .stats-table tbody tr:hover {
+    background-color: #eee;
+}
+
+
+
+* Estilos para la página de detalles de la revista */
+.revista-detalles {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.revista-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos específicos para la nueva estructura de revista-detalles */
+.revista-detalles-grid {
+    display: grid;
+    grid-template-columns: 25% 40% 35%; /* Ajustar anchos */
+    gap: 20px;
+}
+
+.revista-col-imagen {
+    text-align: center;
+}
+
+.revista-col-imagen img {
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin recortar */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.revista-col-datos {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabla-revista-info {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.tabla-revista-info th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: center;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+.tabla-revista-info td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-revista-info tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-revista-info tbody tr:hover {
+    background-color: #eee;
+}
+
+.revista-col-tablas-top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-left: 2px solid #ddd; /* Línea divisoria */
+    padding-left: 20px; /* Espacio para la línea */
+}
+
+.revista-col-tablas-top .stats-table {
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.revista-col-tablas-top .stats-table h4 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 0.95em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.revista-col-tablas-top .stats-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.revista-col-tablas-top .stats-table td {
+    padding: 8px;
+    font-size: 0.9em;
+    border-bottom: 1px solid #eee;
+}
+
+.revista-col-tablas-top .stats-table tr:last-child td {
+    border-bottom: none;
+}
+
+.revista-col-tablas-top .stats-table td:first-child {
+    color: #7f8c8d;
+    width: 30px;
+}
+
+
+/* estilos.css */
+/* Estilos específicos para la nueva estructura de revista-detalles */
+.revista-detalles {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.revista-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el nuevo contenedor superior */
+.revista-info-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px; /* Espacio debajo del contenedor superior */
+}
+
+/* Estilos para la columna de la imagen */
+.revista-col-imagen {
+    width: 25%; /* Ancho de la columna de la imagen */
+}
+
+.revista-col-imagen img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Altura máxima para la imagen */
+    object-fit: contain; /* Ajustar la imagen al contenedor */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la columna de datos */
+.revista-col-datos {
+    width: 75%; /* Ancho de la columna de datos */
+}
+
+/* Estilos para la tabla de información */
+.tabla-revista-info {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.tabla-revista-info th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: center;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+.tabla-revista-info td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+
+.tabla-revista-info td:first-child {
+    font-weight: bold; /* Texto en negrita */
+}
+
+.tabla-revista-info a.enlace-subrayado {
+    text-decoration: underline; /* Subrayar los enlaces */
+}
+
+.tabla-revista-info tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-revista-info tbody tr:hover {
+    background-color: #eee;
+}
+
+/* Estilos para el nuevo contenedor inferior */
+.revista-top-tables-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px; /* Espacio arriba del contenedor inferior */
+}
+
+/* Estilos para las columnas de las tablas top */
+.revista-col-tablas-top {
+    width: 33.33%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.revista-col-tablas-top .stats-table {
+    width: 100%;
+    margin: 0;
+}
+
+.revista-col-tablas-top .stats-table h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #AF1A2E;
+    margin-bottom: 10px;
+}
+.revista-col-tablas-top:not(:last-child) {
+    border-right: 2px solid #ddd;  Añade la línea divisoria
+}
+
+.tabla-grupos {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Estilos para los encabezados de la tabla */
+.tabla-grupos th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: normal;
+}
+
+.tabla-grupos th a {
+    color: white;
+    text-decoration: none;
+}
+
+.tabla-grupos th a:hover {
+   /* text-decoration: underline;  Subrayado al pasar el ratón */
+}
+
+.tabla-grupos th a.active {
+    font-weight: bold;
+}
+
+.tabla-grupos th a span {
+    margin-left: 5px;
+}
+
+.tabla-grupos th a span {
+    font-size: 12px;
+    color: white;
+}
+
+/* Estilos para las celdas de la tabla */
+.tabla-grupos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para filas pares */
+.tabla-grupos tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para el hover de las filas */
+.tabla-grupos tbody tr:hover {
+    background-color: #eee;
+}
+
+/* Estilos para la página de detalles de la revista */
+.revista-detalles {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.revista-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.revista-info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.revista-imagen {
+    
+    padding-right: 20px;
+}
+
+.revista-imagen img {
+    max-width: 100%;
+    /* height: auto; */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-fija {
+    height: 300px; /* Altura fija */
+    width: auto; /* Mantener proporción */
+    object-fit: cover; /* Ajustar la imagen para llenar el contenedor */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: sombra */
+}
+
+.revista-datos {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  /*  justify-content: space-between; */
+}
+
+.revista-datos-bloque {
+    margin-bottom: 10px;
+}
+
+.revista-datos-bloque p {
+    margin: 5px 0;
+}
+
+.revista-tabla {
+    margin-top: 30px;
+}
+
+/* Estilos específicos para la nueva estructura de revista-detalles */
+.revista-detalles-grid {
+    display: flex;
+    flex-direction: column; /* Apilar contenedores */
+    gap: 20px;
+}
+
+/* Estilo para el contenedor superior */
+.revista-info-container {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilo para la columna de la imagen */
+.revista-col-imagen {
+    width: 25%; /* Ancho de la columna de la imagen */
+    text-align: center; /* Centrar la imagen */
+}
+
+.revista-col-imagen img {
+    max-width: 100%;
+    height: auto;
+    max-height: 325px;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la columna de datos */
+.revista-col-datos {
+    width: 75%; /* Ancho de la columna de datos */
+}
+
+/* Estilo para la tabla de información */
+.tabla-revista-info {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.tabla-revista-info th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: center;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+.tabla-revista-info td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-revista-info td:first-child {
+    font-weight: bold;
+}
+
+.tabla-revista-info a.enlace-subrayado {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+.tabla-revista-info tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-revista-info tbody tr:hover {
+    background-color: #eee;
+}
+
+/* Estilos para el contenedor inferior */
+.revista-top-tables-container {
+    display: flex;
+    justify-content: space-between;  Espacio entre las columnas
+    margin-top: 20px;
+}
+
+/* Estilos para las columnas de las tablas top */
+.revista-col-tablas-top {
+    width: 33%;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para la línea vertical */
+}
+
+/* Quitar la línea divisoria en la última columna */
+.revista-top-tables-container .revista-col-tablas-top:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;  Grosor de la línea
+    background-color: #ddd;  Color de la línea
+}
+
+.revista-col-tablas-top .stats-table {
+    margin: 0;
+}
+
+.revista-col-tablas-top .stats-table h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #AF1A2E;
+    margin-bottom: 10px;
+}
+.tabla-grupos {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Estilos para los encabezados de la tabla */
+.tabla-grupos th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: normal;
+}
+
+.tabla-grupos th a {
+    color: white;
+    text-decoration: none;
+}
+
+.tabla-grupos th a:hover {
+   /* text-decoration: underline;  Subrayado al pasar el ratón */
+}
+
+.tabla-grupos th a.active {
+    font-weight: bold;
+}
+
+.tabla-grupos th a span {
+    margin-left: 5px;
+}
+
+.tabla-grupos th a span {
+    font-size: 12px;
+    color: white;
+}
+
+/* Estilos para las celdas de la tabla */
+.tabla-grupos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para filas pares */
+.tabla-grupos tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para el hover de las filas */
+.tabla-grupos tbody tr:hover {
+    background-color: #eee;
+}

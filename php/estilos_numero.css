@@ -1,0 +1,15 @@
+/* estilos_numero.css */
+/* Estilos para numero */
+.numero-detalles {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.numero-imagen img {
+    max-width: 100%;
+    height: 300px;
+}
+
+.tabla-botones button {
+    padding: 10px 15px;
+}

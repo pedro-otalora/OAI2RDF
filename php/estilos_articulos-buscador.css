@@ -1,0 +1,90 @@
+.articulos-buscador {
+  padding: 20px;
+ 
+}
+
+.titulo-articulos h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.busqueda-articulos form {
+  display: block;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.busqueda-articulos input[type="text"] {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.busqueda-articulos button {
+  padding: 8px 16px;
+  background-color: #AF1A2E;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.mensaje-filtro {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pagination a {
+  margin-right: 5px;
+}
+
+
+.fila-filtro {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.fila-filtro select,
+.fila-filtro input {
+  padding: 8px;
+}
+
+.boton-agregar,
+.boton-eliminar {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.boton-agregar:hover,
+.boton-eliminar:hover {
+  background-color: #000000;
+}
+
+
+
+.boton-eliminar, .boton-agregar {
+  margin: 0 5px;
+}
+
+.contenedor-boton-buscar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.boton-buscar {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+.resultados-info {
+  text-align: center;
+  margin-top: 10px;
+}

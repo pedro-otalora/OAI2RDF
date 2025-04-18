@@ -1,0 +1,150 @@
+/* estilos_revista.css */
+/* Estilos para la página de detalles de la revista */
+.revista-detalles {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.revista-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos específicos para la nueva estructura de revista-detalles */
+.revista-detalles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width:100%;
+}
+
+/* Estilo para el contenedor superior */
+.revista-info-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilo para la columna de la imagen */
+.revista-col-imagen {
+    width: auto%;
+    text-align: center;
+}
+
+.revista-col-imagen img {
+    max-width: 100%;
+    height: auto;
+    max-height: 325px;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la columna de datos */
+.revista-col-datos {
+    width: auto;
+}
+
+/* Estilo para la tabla de información */
+.tabla-revista-info {
+    width: auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.tabla-revista-info th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: center;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+.tabla-revista-info td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-revista-info td:first-child {
+    font-weight: bold;
+}
+
+.tabla-revista-info a.enlace-subrayado {
+    text-decoration: none;
+    color: #AF1A2E;
+}
+
+.tabla-revista-info tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-revista-info tbody tr:hover {
+    background-color: #eee;
+}
+
+/* Estilos para el contenedor inferior */
+.revista-top-tables-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Estilos para las columnas de las tablas top */
+.revista-col-tablas-top {
+    width: auto;
+    flex: 1;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Quitar la línea divisoria en la última columna */
+.revista-top-tables-container .revista-col-tablas-top:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #ddd;
+}
+
+/* Estilos para las tablas TOP */
+.revista-col-tablas-top .tabla-grupos {
+    width: 100%;
+    margin: 0;
+}
+
+.revista-col-tablas-top .tabla-grupos th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+     width: 60%; /* Ajusta el ancho del header */
+}
+
+.revista-col-tablas-top .tabla-grupos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    width: 40%;
+}
+
+.revista-col-tablas-top .tabla-grupos tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.revista-col-tablas-top .tabla-grupos tbody tr:hover {
+    background-color: #eee;
+}

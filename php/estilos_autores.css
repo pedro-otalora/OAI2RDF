@@ -1,0 +1,39 @@
+/* Contenedor principal */
+.autores-lista {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Botonera de letras */
+.botonera-letras {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.botonera-letras button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #AF1A2E;
+    border: none;
+    border-radius: 5px;
+}
+
+.botonera-letras button:hover {
+    background-color: #8B1624;
+}
+
+/* Tabla */
+.tabla-grupos th, .tabla-grupos td {
+    text-align: left;
+}
+
+.botonera-letras .active {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}

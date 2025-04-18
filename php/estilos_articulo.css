@@ -1,0 +1,139 @@
+/* estilos_articulo.css */
+/* Estilos para la página de detalles del artículo */
+.articulo-detalles {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.articulo-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos específicos para la nueva estructura de articulo-detalles */
+.articulo-detalles-grid {
+    display: flex;
+    flex-direction: row; /* Cambiar a filas horizontales */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilo para el contenedor superior */
+.articulo-info-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilo para la columna de la imagen */
+.articulo-col-imagen {
+    flex: 0.5; /* Ajusta el tamaño proporcionalmente */
+    text-align: center;
+}
+
+.articulo-col-imagen img {
+    max-width: 100%;
+    height: auto;
+    max-height: 325px;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la columna de datos */
+.articulo-col-datos {
+    flex: 2; /* La tabla ocupa más espacio */
+}
+
+/* Estilo para la tabla de información */
+.tabla-articulo-info {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-articulo-info th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: center;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+.tabla-articulo-info a {
+    color: #AF1A2E;
+}
+
+.tabla-articulo-info td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-articulo-info td:first-child {
+    font-weight: bold;
+}
+
+.tabla-articulo-info a.enlace-subrayado {
+    text-decoration: none;
+    color: #AF1A2E;
+}
+
+.tabla-articulo-info tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-articulo-info tbody tr:hover {
+    background-color: #eee;
+}
+
+/* Estilos para el resumen del artículo */
+.resumen-articulo {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resumen-articulo h3 {
+    color: #AF1A2E;
+    margin-bottom: 10px;
+}
+
+/* Estilos para la tabla de artículos relacionados */
+.tabla-articulos-relacionados {
+    margin-top: 20px;
+}
+
+.tabla-articulos-relacionados table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-articulos-relacionados th {
+    background-color: #AF1A2E;
+    color: white;
+    text-align: center;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+.tabla-articulos-relacionados td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-articulos-relacionados tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabla-articulos-relacionados tbody tr:hover {
+    background-color: #eee;
+}

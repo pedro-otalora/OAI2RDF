@@ -1,0 +1,39 @@
+.autores-buscador {
+  padding: 20px;
+}
+
+.titulo-autores h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.busqueda-autores form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.busqueda-autores input[type="text"] {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.busqueda-autores button {
+  padding: 8px 16px;
+  background-color: #AF1A2E;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.mensaje-filtro {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pagination a {
+  margin: 0 5px;
+}
