@@ -34,5 +34,6 @@ Morcillo López, L. (2016). Los repositorios institucionales en las universidade
 Silva, A. L., & Terra, A. L. (2023). Cultural heritage on the Semantic Web: The Europeana Data Model. IFLA Journal, 50(1), 93-107. https://doi.org/10.1177/03400352231202506
 
 Sumba, F., Ortiz, J., Segarra, J., & Saquicela, V. (2017). Integración de fuentes de datos bibliográficas utilizando tecnologías de Linked Data: Caso de uso: Biblioteca de la Universidad de Cuenca. Maskana, 8(2), 189–203. Recuperado de https://publicaciones.ucuenca.edu.ec/ojs/index.php/maskana/article/view/1462
+
 Universidad de Cuenca. (s.f.). Linked Open Data Platform: Solution to accomplish the life cycle management for publishing Linked Data on the Web. Recuperado el 29 de marzo de 2025, de https://ucuenca.github.io/lodplatform/
 
