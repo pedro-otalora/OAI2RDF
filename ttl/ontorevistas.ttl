@@ -1,0 +1,255 @@
+@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ontorevistas: <http://gicd.inf.um.es/wd/ontorevistas/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix rdf4j: <http://rdf4j.org/schema/rdf4j#> .
+
+<http://gicd.inf.um.es/wd/ontorevistas/> a owl:Ontology;
+  dc:title "Ontología de Revistas Científicas"@es;
+  dc:description "Ontología para representar información sobre revistas científicas, números, artículos y autores."@es;
+  owl:imports <http://www.w3.org/2004/02/skos/core>, <http://purl.org/ontology/bibo/>,
+    <http://schema.org/>, <http://purl.org/dc/terms/>, <http://xmlns.com/foaf/0.1/>;
+  dc:creator "Pedro Otálora";
+  dc:created "2025-02-15";
+  dc:license "http://creativecommons.org/licenses/by/4.0/" .
+
+ontorevistas:Revista a owl:Class;
+  rdfs:subClassOf bibo:Journal;
+  rdfs:label "Revista"@es;
+  rdfs:comment "Revistas científicas de la Universidad de Murcia"@es;
+  owl:equivalentClass schema:Periodical .
+
+ontorevistas:Articulo a owl:Class;
+  rdfs:subClassOf bibo:AcademicArticle, bibo:JournalArticle;
+  rdfs:label "Artículo"@es;
+  owl:equivalentClass schema:ScholarlyArticle .
+
+ontorevistas:Autor a owl:Class;
+  rdfs:subClassOf foaf:Person;
+  rdfs:label "Autor"@es;
+  owl:equivalentClass schema:Person .
+
+ontorevistas:PalabraClave a owl:Class;
+  rdfs:subClassOf skos:Concept, bibo:DocumentPart;
+  rdfs:label "Palabra clave"@es .
+
+ontorevistas:GrupoTema a owl:Class;
+  rdfs:subClassOf skos:Collection;
+  rdfs:label "Grupo Temático"@es;
+  rdfs:comment "Colección de conceptos que representan un área temática para clasificar artículos científicos"@es .
+
+ontorevistas:Numero a owl:Class;
+  rdfs:subClassOf bibo:Issue;
+  rdfs:label "Número"@es .
+
+ontorevistas:tieneNumero a owl:ObjectProperty;
+  rdfs:label "tiene número"@es;
+  rdfs:range ontorevistas:Numero;
+  rdfs:domain ontorevistas:Revista;
+  owl:equivalentProperty bibo:issue;
+  owl:inverseOf ontorevistas:esParteDeRevista .
+
+ontorevistas:esParteDeRevista a owl:ObjectProperty;
+  rdfs:label "es parte de revista"@es;
+  rdfs:range ontorevistas:Revista;
+  rdfs:domain ontorevistas:Numero;
+  owl:equivalentProperty dcterms:isPartOf;
+  owl:inverseOf ontorevistas:tieneNumero .
+
+ontorevistas:tieneArticulo a owl:ObjectProperty;
+  rdfs:label "tiene artículo"@es;
+  rdfs:range ontorevistas:Articulo;
+  rdfs:domain ontorevistas:Numero;
+  owl:equivalentProperty bibo:article;
+  owl:inverseOf ontorevistas:esParteDeNumero .
+
+ontorevistas:esParteDeNumero a owl:ObjectProperty;
+  rdfs:label "es parte de número"@es;
+  rdfs:range ontorevistas:Numero;
+  rdfs:domain ontorevistas:Articulo;
+  owl:equivalentProperty dcterms:isPartOf;
+  owl:inverseOf ontorevistas:tieneArticulo .
+
+ontorevistas:tieneAutor a owl:ObjectProperty;
+  rdfs:label "tiene autor"@es;
+  rdfs:range ontorevistas:Autor;
+  rdfs:domain ontorevistas:Articulo;
+  owl:equivalentProperty dcterms:creator;
+  owl:inverseOf ontorevistas:esAutorDe .
+
+ontorevistas:esAutorDe a owl:ObjectProperty;
+  rdfs:label "es autor de"@es;
+  rdfs:range ontorevistas:Articulo;
+  rdfs:domain ontorevistas:Autor;
+  owl:equivalentProperty foaf:made;
+  owl:inverseOf ontorevistas:tieneAutor .
+
+ontorevistas:tienePalabraClave a owl:ObjectProperty;
+  rdfs:label "tiene palabra clave"@es;
+  rdfs:range ontorevistas:PalabraClave;
+  rdfs:domain ontorevistas:Articulo;
+  owl:equivalentProperty bibo:topic;
+  owl:inverseOf ontorevistas:esPalabraClaveDe .
+
+ontorevistas:esPalabraClaveDe a owl:ObjectProperty;
+  rdfs:label "es palabra clave de"@es;
+  rdfs:range ontorevistas:Articulo;
+  rdfs:domain ontorevistas:PalabraClave;
+  owl:inverseOf ontorevistas:tienePalabraClave .
+
+ontorevistas:perteneceAGrupoTema a owl:ObjectProperty;
+  rdfs:label "pertenece al grupo temático"@es;
+  rdfs:range ontorevistas:GrupoTema;
+  rdfs:domain ontorevistas:Articulo;
+  owl:equivalentProperty bibo:topic;
+  owl:inverseOf ontorevistas:esGrupoTemaDe .
+
+ontorevistas:esGrupoTemaDe a owl:ObjectProperty;
+  rdfs:label "es grupo temático de"@es;
+  rdfs:range ontorevistas:Articulo;
+  rdfs:domain ontorevistas:GrupoTema;
+  owl:inverseOf ontorevistas:perteneceAGrupoTema .
+
+ontorevistas:revistaDOI a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "DOI de la revista"@es;
+  rdfs:range xsd:anyURI;
+  rdfs:domain ontorevistas:Revista;
+  rdfs:subPropertyOf bibo:doi .
+
+ontorevistas:revistaISSNE a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "ISSN Electrónico"@es;
+  rdfs:range xsd:string;
+  rdfs:domain ontorevistas:Revista;
+  rdfs:subPropertyOf bibo:eissn .
+
+ontorevistas:revistaISSN a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "ISSN Impreso"@es;
+  rdfs:range xsd:string;
+  rdfs:domain ontorevistas:Revista;
+  rdfs:subPropertyOf bibo:issn .
+
+ontorevistas:articuloCita a owl:DatatypeProperty;
+  rdfs:label "Cita bibliográfica del artículo"@es;
+  rdfs:range xsd:string;
+  rdfs:domain ontorevistas:Articulo;
+  rdfs:subPropertyOf dcterms:bibliographicCitation .
+
+ontorevistas:revistaURL a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "URL de la revista"@es;
+  rdfs:comment "La URL principal de la revista"@es;
+  rdfs:range xsd:anyURI;
+  rdfs:domain ontorevistas:Revista;
+  rdfs:subPropertyOf bibo:uri .
+
+ontorevistas:numeroVolumen a owl:AnnotationProperty;
+  rdfs:label "Volumen y año del número"@es;
+  rdfs:range xsd:string;
+  rdfs:domain ontorevistas:Numero;
+  rdfs:subPropertyOf bibo:volume .
+
+ontorevistas:numeroURL a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "URL del número"@es;
+  rdfs:range xsd:anyURI;
+  rdfs:domain ontorevistas:Numero;
+  rdfs:subPropertyOf bibo:uri .
+
+ontorevistas:articuloFechaPublicacion a owl:DatatypeProperty;
+  rdfs:label "Fecha de publicación del artículo"@es;
+  rdfs:range xsd:date;
+  rdfs:domain ontorevistas:Articulo;
+  rdfs:subPropertyOf bibo:issued .
+
+ontorevistas:articuloOAI a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "Identificador OAI-PMH del artículo"@es;
+  rdfs:range xsd:string;
+  rdfs:domain ontorevistas:Articulo;
+  rdfs:subPropertyOf dcterms:identifier .
+
+ontorevistas:articuloResumen a owl:DatatypeProperty;
+  rdfs:label "Resumen del artículo"@es;
+  rdfs:comment "Resumen descriptivo del artículo científico"@es;
+  rdfs:range xsd:string;
+  rdfs:domain ontorevistas:Articulo;
+  rdfs:subPropertyOf bibo:abstract .
+
+ontorevistas:articuloURL a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "URL del artículo"@es;
+  rdfs:range xsd:anyURI;
+  rdfs:domain ontorevistas:Articulo;
+  rdfs:subPropertyOf bibo:uri .
+
+ontorevistas:articuloIdioma a owl:DatatypeProperty;
+  rdfs:label "Idioma del artículo"@es;
+  rdfs:range xsd:language;
+  rdfs:domain ontorevistas:Articulo;
+  rdfs:subPropertyOf dcterms:language .
+
+ontorevistas:articuloDOI a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "DOI del artículo"@es;
+  rdfs:range xsd:anyURI;
+  rdfs:domain ontorevistas:Articulo;
+  rdfs:subPropertyOf bibo:doi .
+
+ontorevistas:articuloEditor a owl:AnnotationProperty;
+  rdfs:label "Editor del artículo"@es;
+  rdfs:range foaf:Organization;
+  rdfs:domain ontorevistas:Articulo;
+  rdfs:subPropertyOf bibo:editor .
+
+ontorevistas:articuloRecursoURI a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "Recurso URI del artículo"@es;
+  rdfs:range xsd:anyURI;
+  rdfs:domain ontorevistas:Articulo;
+  rdfs:subPropertyOf bibo:locator .
+
+ontorevistas:grupoTemaID a owl:DatatypeProperty;
+  rdfs:label "ID del grupo temático"@es;
+  rdfs:range xsd:string;
+  rdfs:domain ontorevistas:GrupoTema;
+  rdfs:subPropertyOf dcterms:identifier .
+
+ontorevistas:autorID a owl:DatatypeProperty, owl:FunctionalProperty;
+  rdfs:label "ID del autor"@es;
+  rdfs:range xsd:int;
+  rdfs:domain ontorevistas:Autor;
+  rdfs:subPropertyOf dcterms:identifier .
+
+ontorevistas:numeroImagen a owl:DatatypeProperty;
+  rdfs:label "Imagen de la portada del número"@es;
+  rdfs:range xsd:anyURI;
+  rdfs:domain ontorevistas:Numero;
+  rdfs:subPropertyOf schema:image .
+
+ontorevistas:revistaImagen a owl:DatatypeProperty;
+  rdfs:label "Imagen de la portada de la revista"@es;
+  rdfs:range xsd:anyURI;
+  rdfs:domain ontorevistas:Revista;
+  rdfs:subPropertyOf schema:image .
+
+ontorevistas:terminoUnesco a owl:DatatypeProperty;
+  rdfs:label "URI del término de la Unesco"@es;
+  rdfs:range xsd:anyURI;
+  rdfs:domain ontorevistas:PalabraClave;
+  rdfs:subPropertyOf skos:exactMatch .
+
+ontorevistas:terminoLEM a owl:DatatypeProperty;
+  rdfs:label "URI del término de la Lista de Encabezamientos de Materias"@es;
+  rdfs:range xsd:anyURI;
+  rdfs:domain ontorevistas:PalabraClave;
+  rdfs:subPropertyOf skos:exactMatch .
+
+ontorevistas:grupoTemaArea a owl:DatatypeProperty;
+  rdfs:label "Área del grupo temático"@es;
+  rdfs:range xsd:string;
+  rdfs:domain ontorevistas:GrupoTema;
+  rdfs:subPropertyOf dcterms:description .
